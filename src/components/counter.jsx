@@ -4,9 +4,9 @@ class Counter extends Component {
   state = {
     count: 0,
   };
-
+  //this.setState() it's inherited from React's component. This method tells React that we are updating the state, then it'll figure out what part of the state is changed, and based on that it'll bring the DOM in sync with the virtual DOM.
   handleIncrement = () => {
-    console.log("Increment Clicked", this);
+    this.setState({ count: this.state.count + 1 });
   };
 
   render() {
